@@ -1,0 +1,28 @@
+name = "streamdeck-cf-blog-rss"
+type = "javascript"
+workers_dev = false
+compatibility_date = "2021-10-02"
+
+zone_id = "e698740e0c15802f8731e1aaa7f3e9af"
+routes = ["streamdeck-cf-blog-rss.eidam.cf"]
+
+kv_namespaces = [ 
+  { binding = "KV_STREAMDECK", id = "7c1127acf1d74364a4d9a33a28232f6e" }
+]
+
+[durable_objects]
+classes = [
+  { binding = "DO_STREAMDECK", class_name = "StreamDeckDurableObject" },
+]
+
+[triggers]
+crons = ["* * * * *"]
+
+[build]
+command = "yarn install && yarn build"
+cwd = "."
+watch_dir = "src"
+
+[build.upload]
+format = "modules"
+main = "main.mjs"
