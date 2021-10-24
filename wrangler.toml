@@ -3,11 +3,11 @@ type = "javascript"
 workers_dev = false
 compatibility_date = "2021-10-02"
 
-zone_id = "e698740e0c15802f8731e1aaa7f3e9af"
+zone_id = "da25af1c9238d4dd7c4bc7ae268ecbf1"
 routes = ["streamdeck-cf-blog-rss.eidam.cf"]
 
 kv_namespaces = [ 
-  { binding = "KV_STREAMDECK", id = "7c1127acf1d74364a4d9a33a28232f6e" }
+  { binding = "KV_STREAMDECK", id = "b700d11cb9d84edba0fa26babcedd7bd" }
 ]
 
 [durable_objects]
